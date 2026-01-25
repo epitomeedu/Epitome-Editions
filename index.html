@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Book Title</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Architects+Daughter&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Book Title -->
+  <header>
+    <h1>Your Book Title</h1>
+    <h2>Subtitle (if any)</h2>
+  </header>
+
+  <!-- Book Cover & Description -->
+  <section class="book-info">
+    <img src="images/cover.jpg" alt="Book Cover">
+    <p>This is your book description. Introduce your story and hook readers here!</p>
+    <a href="https://link-to-buy-book.com" class="button">Buy the Book</a>
+  </section>
+
+  <!-- About the Author -->
+  <section class="about-author">
+    <h3>About the Author</h3>
+    <p>Short bio about you, your inspiration, and what readers can expect.</p>
+  </section>
+
+  <!-- Contact Form (Web3Forms) -->
+  <section class="contact">
+    <h3>Contact / Newsletter Signup</h3>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+</body>
+</html>
