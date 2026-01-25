@@ -1,0 +1,80 @@
+/* Fonts */
+h1, h2 {
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+h3, .subheader {
+  font-family: 'Architects Daughter', cursive;
+}
+
+body, p {
+  font-family: 'Quattrocento', serif;
+}
+
+/* Colors */
+body {
+  background-color: #A9D6E5; /* Icy Blue */
+  color: #1A1F71; /* Dark Indigo for text */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1A1F71; /* Dark Indigo header */
+  color: #C0C0C0; /* Silver text */
+}
+
+.book-info {
+  text-align: center;
+  padding: 2rem;
+}
+
+.book-info img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.button {
+  background-color: #FFF44F; /* Lemon Yellow */
+  color: #1A1F71;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #1A1F71;
+  color: #FFF44F;
+}
+
+/* Sections */
+.about-author, .contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Form styling */
+form input, form textarea, form button {
+  display: block;
+  width: 80%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  font-family: 'Quattrocento', serif;
+}
+
+form button {
+  background-color: #FFF44F;
+  color: #1A1F71;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #1A1F71;
+  color: #FFF44F;
+}
