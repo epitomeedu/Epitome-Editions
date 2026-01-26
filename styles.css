@@ -1,125 +1,177 @@
-/* ---------- FONTS ---------- */
-h1, h2 {
-  font-family: 'Shadows Into Light Two', cursive;
-}
-
-h3, .subheader {
-  font-family: 'Architects Daughter', cursive;
-}
-
-body, p, input, textarea {
-  font-family: 'Quattrocento', serif;
-}
-
-/* ---------- COLORS ---------- */
+/* ---------------- GENERAL ---------------- */
 body {
-  background-color: #99c5ff; /* Ice Blue */
-  color: #11274f; /* Indigo text */
   margin: 0;
-  padding: 0;
-}
-
-header {
-  text-align: center;
-  padding: 2rem;
-  background-color: #11274f; /* Indigo header */
-  color: #fff3c2; /* Light Lemon text */
-}
-
-.book-info {
-  text-align: center;
-  padding: 2rem;
-}
-
-.book-info img {
-  max-width: 300px;
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-.button, form button {
-  background-color: #fff3c2; /* Light Lemon */
-  color: #11274f; /* Indigo text */
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
   font-family: 'Quattrocento', serif;
-}
-
-.button:hover, form button:hover {
-  background-color: #11274f; /* Indigo on hover */
-  color: #fff3c2; /* Light Lemon text on hover */
-}
-
-/* ---------- SECTIONS ---------- */
-.about-author, .contact {
-  padding: 2rem;
-  text-align: center;
-  background-color: #99c5ff; /* Ice Blue background */
-}
-
-/* ---------- FORM STYLING ---------- */
-form input, form textarea {
-  display: block;
-  width: 80%;
-  margin: 0.5rem auto;
-  padding: 0.5rem;
-  font-family: 'Quattrocento', serif;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #11274f; /* Indigo border */
-}
-
-/* Placeholder color for inputs */
-form input::placeholder, form textarea::placeholder {
-  color: #11274f; /* Indigo placeholder text */
-}
-
-/* Headings inside contact section */
-.contact h3 {
-  font-family: 'Architects Daughter', cursive;
+  background-color: #e6ebf0; /* silver background */
   color: #11274f; /* Indigo */
 }
 
-/* ---------- TEXT READABILITY FIX ---------- */
-.book-info p {
-  max-width: 700px;        /* controls where the line stops */
-  margin: 1.5rem auto;    /* centers it */
-  line-height: 1.6;       /* space between lines */
-  font-size: 1.05rem;     /* slightly larger, book-ish */
-  text-align: left;       /* paragraphs should NOT be centered */
+/* ---------------- HEADER ---------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11274f; /* Indigo */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.book-info p {
-  letter-spacing: 0.02em;
+.header-left {
+  font-family: 'Quattrocento', serif;
+  color: #fff3c2; /* pale yellow */
+  font-size: 1.8rem;
 }
 
-/* ---------- LONG-FORM TEXT (GLOBAL) ---------- */
-.book-info p,
-.about-author p,
-.contact p {
-  max-width: 700px;
-  margin: 1.5rem auto;
-  line-height: 1.6;
-  font-size: 1.05rem;
+.header-right a {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff3c2;
+  color: #11274f;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.header-right a:hover {
+  box-shadow: 0 0 12px 2px #c0c0c0; /* silver glow */
+  color: #11274f; /* keep text blue */
+}
+
+/* ---------------- BOOK SECTION ---------------- */
+.book-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Left column: pinned book cover */
+.book-left {
+  flex: 0 0 45%;
+  position: sticky;
+  top: 6rem;
+  padding: 2rem;
+}
+
+.book-left img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(17, 39, 79, 0.2);
+  transition: transform 0.1s ease-out;
+}
+
+/* Right column: scrolling content */
+.book-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+.book-title {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.book-subtitle {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.book-info {
+  font-family: 'Quattrocento', serif;
+  margin-bottom: 2rem;
+}
+
+/* Price cards */
+.price-cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.price-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(17, 39, 79, 0.1);
+}
+
+.price-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Collapsible sections */
+.collapsible-section {
+  margin-bottom: 2rem;
+}
+
+.collapsible {
+  background-color: #fff3c2;
+  color: #11274f;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border: none;
   text-align: left;
-  letter-spacing: 0.02em;
+  outline: none;
+  font-family: 'Architects Daughter', cursive;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
 }
 
-/* ---------- SILVER / ICE CARDS ---------- */
-.card {
-  background: linear-gradient(
-    180deg,
-    rgba(245, 247, 250, 0.95),
-    rgba(230, 235, 240, 0.95)
-  ); /* icy silver */
-  max-width: 760px;
-  margin: 2.5rem auto 1.5rem;
-  padding: 2.5rem;
-  border-radius: 18px;
-  border: 1px solid rgba(192, 192, 192, 0.8);
-  box-shadow: 0 6px 18px rgba(17, 39, 79, 0.15);
+.collapsible.active {
+  box-shadow: 0 0 10px #c0c0c0;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0 1rem;
+}
+
+/* Buy button */
+.book-right .button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff3c2; /* lemon */
+  color: #11274f;
+  text-decoration: none;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.book-right .button:hover {
+  background-color: #f0e29a;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1000px) {
+  .book-section {
+    flex-direction: column;
+  }
+  .book-left {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .book-right {
+    width: 100%;
+  }
+  .price-cards {
+    flex-direction: column;
+  }
 }
