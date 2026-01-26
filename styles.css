@@ -1,17 +1,21 @@
-/* ---------------- GENERAL ---------------- */
+/* =========================
+   GENERAL
+   ========================= */
 body {
   margin: 0;
   font-family: 'Quattrocento', serif;
-  background-color: #e6ebf0; /* silver background */
-  color: #11274f; /* Indigo */
+  background-color: #e6ebf0; /* silver */
+  color: #11274f; /* indigo */
 }
 
-/* ---------------- HEADER ---------------- */
+/* =========================
+   HEADER
+   ========================= */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #11274f; /* Indigo */
+  background-color: #11274f;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -20,34 +24,46 @@ body {
 
 .header-left {
   font-family: 'Quattrocento', serif;
-  color: #fff3c2; /* pale yellow */
+  color: #fff3c2;
   font-size: 1.8rem;
 }
 
+.header-right {
+  display: flex;
+  gap: 1rem;
+}
+
 .header-right a {
-  margin-left: 1rem;
   padding: 0.5rem 1rem;
   background-color: #fff3c2;
   color: #11274f;
   text-decoration: none;
   border-radius: 6px;
+  font-family: 'Architects Daughter', cursive;
   transition: all 0.3s ease;
 }
 
 .header-right a:hover {
-  box-shadow: 0 0 12px 2px #c0c0c0; /* silver glow */
-  color: #11274f; /* keep text blue */
+  box-shadow: 0 0 12px 2px #c0c0c0;
 }
 
-/* ---------------- BOOK SECTION ---------------- */
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff3c2;
+  cursor: pointer;
+}
+
+/* =========================
+   BOOK SECTION (DESKTOP)
+   ========================= */
 .book-section {
   display: flex;
-  flex-wrap: wrap;
   min-height: 100vh;
   padding: 2rem;
 }
 
-/* Left column: pinned book cover */
 .book-left {
   flex: 0 0 45%;
   position: sticky;
@@ -59,34 +75,35 @@ body {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(17, 39, 79, 0.2);
-  transition: transform 0.1s ease-out;
 }
 
-/* Right column: scrolling content */
 .book-right {
   flex: 1;
   padding: 2rem;
 }
 
+/* =========================
+   TEXT
+   ========================= */
 .book-title {
   font-family: 'Shadows Into Light Two', cursive;
   font-size: 2.5rem;
-  margin-top: 0;
+  margin: 0;
 }
 
 .book-subtitle {
   font-family: 'Architects Daughter', cursive;
   font-size: 1.8rem;
-  margin-top: 0.2rem;
-  margin-bottom: 1rem;
+  margin: 0.2rem 0 1rem;
 }
 
 .book-info {
-  font-family: 'Quattrocento', serif;
   margin-bottom: 2rem;
 }
 
-/* Price cards */
+/* =========================
+   PRICE CARDS
+   ========================= */
 .price-cards {
   display: flex;
   gap: 1rem;
@@ -102,297 +119,105 @@ body {
   box-shadow: 0 4px 12px rgba(17, 39, 79, 0.1);
 }
 
-.price-card h4 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
 .price-card-button {
-  display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #fff3c2; /* light lemon */
-  color: #11274f; /* indigo text */
-  font-family: 'Architects Daughter', cursive;
+  background-color: #fff3c2;
+  color: #11274f;
   border: none;
   border-radius: 6px;
+  font-family: 'Architects Daughter', cursive;
   cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
 }
 
-.price-card-button:hover {
-  background-color: #f0e29a; /* slightly darker lemon on hover */
-}
-
-
-/* Collapsible sections */
-.collapsible-section {
-  margin-bottom: 2rem;
-}
-
+/* =========================
+   COLLAPSIBLES
+   ========================= */
 .collapsible {
   background-color: #fff3c2;
   color: #11274f;
-  cursor: pointer;
   padding: 0.6rem 1rem;
   width: 100%;
   border: none;
-  text-align: left;
-  outline: none;
-  font-family: 'Architects Daughter', cursive;
   border-radius: 6px;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.collapsible.active {
-  box-shadow: 0 0 10px #c0c0c0;
+  font-family: 'Architects Daughter', cursive;
+  cursor: pointer;
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: rgba(255, 255, 255, 0.1);
+  transition: max-height 0.3s ease;
   padding: 0 1rem;
 }
 
+/* =========================
+   CONTACT FORM
+   ========================= */
 .contact-form {
   margin-top: 3rem;
   padding: 1.5rem;
-  background-color: #f2f2f2; /* soft silver background for the form card */
+  background-color: #f2f2f2;
   border-radius: 10px;
-  font-family: 'Quattrocento', serif;
 }
 
-.contact-form h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: #11274f; /* indigo */
-}
-
-/* Labels */
-.contact-form label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-  color: #11274f;
-}
-
-/* Input fields */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.6rem 0.8rem;
+  padding: 0.6rem;
   margin-bottom: 1rem;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Quattrocento', serif;
-  font-size: 1rem;
-  background-color: #fff3c2; /* light lemon */
-  color: #11274f; /* indigo */
-  box-sizing: border-box;
-}
-
-/* Larger message box */
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Submit button */
-.contact-form .button {
-  padding: 0.6rem 1.2rem;
-  background-color: #fff3c2; /* lemon yellow */
-  color: #11274f; /* indigo */
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.contact-form .button:hover {
-  background-color: #f0e29a; /* slightly darker yellow on hover */
-}
-
-
-/* Buy button */
-.book-right .button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #fff3c2; /* lemon */
+  background-color: #fff3c2;
   color: #11274f;
-  text-decoration: none;
-  font-family: 'Architects Daughter', cursive;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  transition: background 0.3s ease;
 }
 
-.book-right .button:hover {
-  background-color: #f0e29a;
-}
+/* =========================
+   MOBILE FIX (CLEAN + SIMPLE)
+   ========================= */
+@media (max-width: 768px) {
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 1000px) {
+  /* Header */
+  .header-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .header-right.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Layout */
   .book-section {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
   .book-left {
     position: relative;
     top: 0;
     width: 100%;
-    margin-bottom: 2rem;
-  }
-  .book-right {
-    width: 100%;
-  }
-  .price-cards {
-    flex-direction: column;
-  }
-}
-.book-left {
-  position: sticky;
-  top: 2rem; /* distance from the top of the screen */
-  align-self: flex-start; /* keeps it aligned nicely */
-}
-
-.book-left img {
-  display: block;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(17, 39, 79, 0.2); /* keeps that floating look */
-}
-
-@media (max-width: 768px) {
-  .book-container {
-    flex-direction: column; /* stack left and right vertically */
+    padding: 0;
+    margin-bottom: 1rem;
   }
 
-  .book-left {
-    position: relative;   /* remove sticky on mobile */
-    top: auto;
-    width: 100%;
-    margin-bottom: 1.5rem;
+  .book-left img {
+    width: 40%;
+    max-width: 150px;
+    margin: 0 auto;
   }
 
   .book-right {
-    margin-left: 0;       /* remove the side margin */
-  }
-}
-
-/* Desktop header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #11274f; /* Indigo header */
-}
-
-header .logo {
-  font-family: 'Shadows Into Light Two', cursive;
-  color: #fff3c2; /* pale yellow */
-  font-size: 2rem;
-}
-
-.nav-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-buttons button {
-  background-color: #fff3c2; /* pale yellow */
-  color: #11274f; /* indigo */
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-family: 'Architects Daughter', cursive;
-  transition: all 0.3s ease;
-}
-
-.nav-buttons button:hover {
-  background-color: #fff3c2; /* keep yellow */
-  box-shadow: 0 0 8px #c0c0c0; /* silver glow */
-}
-
-/* Mobile responsive header */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;        /* stack logo and buttons */
-    align-items: flex-start;
     padding: 1rem;
   }
 
-  .nav-buttons {
-    flex-wrap: wrap;               /* wrap buttons to new line */
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-
-  .nav-buttons button {
-    flex: 1 1 calc(50% - 0.5rem); /* two buttons per row */
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-buttons button {
-    flex: 1 1 100%;                /* full-width buttons on very small screens */
-  }
-}
- /* Hide hamburger on desktop */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: #fff3c2; /* pale yellow */
-  cursor: pointer;
-}
-
-/* Show hamburger and hide nav buttons on mobile */
-@media (max-width: 768px) {
-  .nav-buttons {
-    display: none; /* hide the buttons */
+  .price-cards {
     flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* Optional: styling for nav when opened on mobile */
-.nav-buttons.active {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  /* Hide desktop buttons */
-  .nav-buttons {
-    display: none;   /* hidden by default on mobile */
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  /* Show nav buttons only when hamburger is clicked */
-  .nav-buttons.active {
-    display: flex;
-  }
-
-  /* Show the hamburger */
-  .hamburger {
-    display: block;
-    font-size: 2rem;
-    color: #fff3c2; /* pale yellow */
-    cursor: pointer;
   }
 }
