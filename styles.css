@@ -346,3 +346,29 @@ header .logo {
     flex: 1 1 100%;                /* full-width buttons on very small screens */
   }
 }
+ /* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff3c2; /* pale yellow */
+  cursor: pointer;
+}
+
+/* Show hamburger and hide nav buttons on mobile */
+@media (max-width: 768px) {
+  .nav-buttons {
+    display: none; /* hide the buttons */
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Optional: styling for nav when opened on mobile */
+.nav-buttons.active {
+  display: flex;
+}
