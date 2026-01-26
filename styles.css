@@ -266,3 +266,20 @@ body {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(17, 39, 79, 0.2); /* keeps that floating look */
 }
+
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column; /* stack left and right vertically */
+  }
+
+  .book-left {
+    position: relative;   /* remove sticky on mobile */
+    top: auto;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .book-right {
+    margin-left: 0;       /* remove the side margin */
+  }
+}
