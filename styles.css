@@ -13,7 +13,7 @@ body, p {
 
 /* Colors */
 body {
-  background-color: #A9D6E5; /* Icy Blue */
+  background-color: #99c5ff; /* Icy Blue */
   color: #1A1F71; /* Dark Indigo for text */
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #1A1F71; /* Dark Indigo header */
+  background-color: #11274f; /* Dark Indigo header */
   color: #C0C0C0; /* Silver text */
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 .button {
-  background-color: #FFF44F; /* Lemon Yellow */
+  background-color: #FFF3C2; /* Lemon Yellow */
   color: #1A1F71;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
