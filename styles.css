@@ -254,3 +254,15 @@ body {
     flex-direction: column;
   }
 }
+.book-left {
+  position: sticky;
+  top: 2rem; /* distance from the top of the screen */
+  align-self: flex-start; /* keeps it aligned nicely */
+}
+
+.book-left img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(17, 39, 79, 0.2); /* keeps that floating look */
+}
