@@ -283,3 +283,66 @@ body {
     margin-left: 0;       /* remove the side margin */
   }
 }
+
+/* Desktop header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #11274f; /* Indigo header */
+}
+
+header .logo {
+  font-family: 'Shadows Into Light Two', cursive;
+  color: #fff3c2; /* pale yellow */
+  font-size: 2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-buttons button {
+  background-color: #fff3c2; /* pale yellow */
+  color: #11274f; /* indigo */
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Architects Daughter', cursive;
+  transition: all 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #fff3c2; /* keep yellow */
+  box-shadow: 0 0 8px #c0c0c0; /* silver glow */
+}
+
+/* Mobile responsive header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;        /* stack logo and buttons */
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap;               /* wrap buttons to new line */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-buttons button {
+    flex: 1 1 calc(50% - 0.5rem); /* two buttons per row */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-buttons button {
+    flex: 1 1 100%;                /* full-width buttons on very small screens */
+  }
+}
