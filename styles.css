@@ -1,21 +1,17 @@
-/* =========================
-   GENERAL
-   ========================= */
+/* ---------------- GENERAL ---------------- */
 body {
   margin: 0;
   font-family: 'Quattrocento', serif;
-  background-color: #e6ebf0; /* silver */
-  color: #11274f; /* indigo */
+  background-color: #e6ebf0; /* silver background */
+  color: #11274f; /* Indigo text */
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* ---------------- HEADER ---------------- */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #11274f;
+  background-color: #11274f; /* Indigo */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -24,27 +20,23 @@ body {
 
 .header-left {
   font-family: 'Quattrocento', serif;
-  color: #fff3c2;
+  color: #fff3c2; /* pale yellow */
   font-size: 1.8rem;
 }
 
-.header-right {
-  display: flex;
-  gap: 1rem;
-}
-
 .header-right a {
+  margin-left: 1rem;
   padding: 0.5rem 1rem;
   background-color: #fff3c2;
   color: #11274f;
   text-decoration: none;
   border-radius: 6px;
-  font-family: 'Architects Daughter', cursive;
   transition: all 0.3s ease;
 }
 
 .header-right a:hover {
-  box-shadow: 0 0 12px 2px #c0c0c0;
+  box-shadow: 0 0 12px 2px #c0c0c0; /* silver glow */
+  color: #11274f; /* keep text blue */
 }
 
 /* Hamburger */
@@ -55,15 +47,15 @@ body {
   cursor: pointer;
 }
 
-/* =========================
-   BOOK SECTION (DESKTOP)
-   ========================= */
+/* ---------------- BOOK SECTION ---------------- */
 .book-section {
   display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
   padding: 2rem;
 }
 
+/* Left column: pinned book cover */
 .book-left {
   flex: 0 0 45%;
   position: sticky;
@@ -75,35 +67,34 @@ body {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(17, 39, 79, 0.2);
+  transition: transform 0.1s ease-out;
 }
 
+/* Right column: scrolling content */
 .book-right {
   flex: 1;
   padding: 2rem;
 }
 
-/* =========================
-   TEXT
-   ========================= */
 .book-title {
   font-family: 'Shadows Into Light Two', cursive;
   font-size: 2.5rem;
-  margin: 0;
+  margin-top: 0;
 }
 
 .book-subtitle {
   font-family: 'Architects Daughter', cursive;
   font-size: 1.8rem;
-  margin: 0.2rem 0 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 .book-info {
+  font-family: 'Quattrocento', serif;
   margin-bottom: 2rem;
 }
 
-/* =========================
-   PRICE CARDS
-   ========================= */
+/* Price cards */
 .price-cards {
   display: flex;
   gap: 1rem;
@@ -119,40 +110,61 @@ body {
   box-shadow: 0 4px 12px rgba(17, 39, 79, 0.1);
 }
 
-.price-card-button {
-  padding: 0.5rem 1rem;
-  background-color: #fff3c2;
-  color: #11274f;
-  border: none;
-  border-radius: 6px;
-  font-family: 'Architects Daughter', cursive;
-  cursor: pointer;
+.price-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-/* =========================
-   COLLAPSIBLES
-   ========================= */
+.price-card-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #fff3c2; /* light lemon */
+  color: #11274f; /* indigo text */
+  font-family: 'Architects Daughter', cursive;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.price-card-button:hover {
+  background-color: #f0e29a; /* slightly darker lemon */
+}
+
+/* Collapsible sections */
+.collapsible-section {
+  margin-bottom: 2rem;
+}
+
 .collapsible {
   background-color: #fff3c2;
   color: #11274f;
+  cursor: pointer;
   padding: 0.6rem 1rem;
   width: 100%;
   border: none;
-  border-radius: 6px;
+  text-align: left;
+  outline: none;
   font-family: 'Architects Daughter', cursive;
-  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.collapsible.active {
+  box-shadow: 0 0 10px #c0c0c0;
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease-out;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 0 1rem;
 }
 
-/* =========================
-   CONTACT FORM
-   ========================= */
+/* Contact form */
 .contact-form {
   margin-top: 3rem;
   padding: 1.5rem;
@@ -160,63 +172,127 @@ body {
   border-radius: 10px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.6rem;
+.contact-form h3 {
+  margin-top: 0;
   margin-bottom: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff3c2;
   color: #11274f;
 }
 
-/* =========================
-   MOBILE FIX (CLEAN + SIMPLE)
-   ========================= */
-@media (max-width: 768px) {
+.contact-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #11274f;
+}
 
-  /* Header */
-  .header-right {
-    display: none;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Quattrocento', serif;
+  font-size: 1rem;
+  background-color: #fff3c2; /* yellow fields */
+  color: #11274f;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form .button {
+  padding: 0.6rem 1.2rem;
+  background-color: #fff3c2;
+  color: #11274f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .button:hover {
+  background-color: #f0e29a;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1000px) {
+  .book-section {
     flex-direction: column;
+  }
+  .book-left {
+    position: relative;
+    top: 0;
     width: 100%;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .book-right {
+    width: 100%;
+  }
+  .price-cards {
+    flex-direction: column;
+  }
+}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+  /* Book thumbnail */
+  .book-left img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    position: relative; /* remove sticky */
+  }
+  .book-left {
+    top: auto;
+    padding: 1rem 0;
   }
 
-  .header-right.active {
-    display: flex;
+  /* Header adjustments */
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
   }
 
   .hamburger {
     display: block;
   }
 
-  /* Layout */
-  .book-section {
+  .header-right {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .book-left {
-    position: relative;
-    top: 0;
+    gap: 0.5rem;
     width: 100%;
-    padding: 0;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
   }
 
-  .book-left img {
-    width: 40%;
-    max-width: 150px;
-    margin: 0 auto;
+  .header-right.active {
+    display: flex;
   }
 
-  .book-right {
-    padding: 1rem;
+  .header-right a {
+    display: block;
+    padding: 0.6rem 1rem;
+    margin: 0.2rem 0;
+    background-color: #fff3c2;
+    color: #11274f;
+    text-align: center;
+    border-radius: 6px;
   }
 
+  .header-right a:hover {
+    box-shadow: 0 0 8px #c0c0c0;
+    color: #11274f;
+  }
+
+  /* Stack price cards */
   .price-cards {
     flex-direction: column;
   }
