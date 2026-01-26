@@ -1,4 +1,4 @@
-/* Fonts */
+/* ---------- FONTS ---------- */
 h1, h2 {
   font-family: 'Shadows Into Light Two', cursive;
 }
@@ -7,14 +7,14 @@ h3, .subheader {
   font-family: 'Architects Daughter', cursive;
 }
 
-body, p {
+body, p, input, textarea {
   font-family: 'Quattrocento', serif;
 }
 
-/* Colors */
+/* ---------- COLORS ---------- */
 body {
-  background-color: #99c5ff; /* Icy Blue */
-  color: #1A1F71; /* Dark Indigo for text */
+  background-color: #99c5ff; /* Ice Blue */
+  color: #11274f; /* Indigo text */
   margin: 0;
   padding: 0;
 }
@@ -22,8 +22,8 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #11274f; /* Dark Indigo header */
-  color: #C0C0C0; /* Silver text */
+  background-color: #11274f; /* Indigo header */
+  color: #fff3c2; /* Light Lemon text */
 }
 
 .book-info {
@@ -37,44 +37,49 @@ header {
   margin: 0 auto 1rem;
 }
 
-.button {
-  background-color: #FFF3C2; /* Lemon Yellow */
-  color: #1A1F71;
+.button, form button {
+  background-color: #fff3c2; /* Light Lemon */
+  color: #11274f; /* Indigo text */
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Quattrocento', serif;
 }
 
-.button:hover {
-  background-color: #1A1F71;
-  color: #FFF44F;
+.button:hover, form button:hover {
+  background-color: #11274f; /* Indigo on hover */
+  color: #fff3c2; /* Light Lemon text on hover */
 }
 
-/* Sections */
+/* ---------- SECTIONS ---------- */
 .about-author, .contact {
   padding: 2rem;
   text-align: center;
+  background-color: #99c5ff; /* Ice Blue background */
 }
 
-/* Form styling */
-form input, form textarea, form button {
+/* ---------- FORM STYLING ---------- */
+form input, form textarea {
   display: block;
   width: 80%;
   margin: 0.5rem auto;
   padding: 0.5rem;
   font-family: 'Quattrocento', serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #11274f; /* Indigo border */
 }
 
-form button {
-  background-color: #FFF44F;
-  color: #1A1F71;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+/* Placeholder color for inputs */
+form input::placeholder, form textarea::placeholder {
+  color: #11274f; /* Indigo placeholder text */
 }
 
-form button:hover {
-  background-color: #1A1F71;
-  color: #FFF44F;
+/* Headings inside contact section */
+.contact h3 {
+  font-family: 'Architects Daughter', cursive;
+  color: #11274f; /* Indigo */
 }
