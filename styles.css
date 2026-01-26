@@ -96,3 +96,15 @@ form input::placeholder, form textarea::placeholder {
 .book-info p {
   letter-spacing: 0.02em;
 }
+
+/* ---------- LONG-FORM TEXT (GLOBAL) ---------- */
+.book-info p,
+.about-author p,
+.contact p {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
