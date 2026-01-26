@@ -108,3 +108,20 @@ form input::placeholder, form textarea::placeholder {
   text-align: left;
   letter-spacing: 0.02em;
 }
+
+/* ---------- CONTENT CARDS ---------- */
+.card {
+  background-color: #f7f9fc; /* very soft icy off-white */
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1.5px solid #C0C0C0; /* Silver */
+  box-shadow: 0 4px 12px rgba(17, 39, 79, 0.1); /* Indigo shadow */
+}
+
+/* Text inside cards */
+.card p {
+  margin: 0;
+  line-height: 1.6;
+}
