@@ -372,3 +372,27 @@ header .logo {
 .nav-buttons.active {
   display: flex;
 }
+
+@media (max-width: 768px) {
+  /* Hide desktop buttons */
+  .nav-buttons {
+    display: none;   /* hidden by default on mobile */
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  /* Show nav buttons only when hamburger is clicked */
+  .nav-buttons.active {
+    display: flex;
+  }
+
+  /* Show the hamburger */
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    color: #fff3c2; /* pale yellow */
+    cursor: pointer;
+  }
+}
