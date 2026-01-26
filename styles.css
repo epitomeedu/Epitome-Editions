@@ -83,3 +83,16 @@ form input::placeholder, form textarea::placeholder {
   font-family: 'Architects Daughter', cursive;
   color: #11274f; /* Indigo */
 }
+
+/* ---------- TEXT READABILITY FIX ---------- */
+.book-info p {
+  max-width: 700px;        /* controls where the line stops */
+  margin: 1.5rem auto;    /* centers it */
+  line-height: 1.6;       /* space between lines */
+  font-size: 1.05rem;     /* slightly larger, book-ish */
+  text-align: left;       /* paragraphs should NOT be centered */
+}
+
+.book-info p {
+  letter-spacing: 0.02em;
+}
