@@ -157,6 +157,67 @@ body {
   padding: 0 1rem;
 }
 
+.contact-form {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #f2f2f2; /* soft silver background for the form card */
+  border-radius: 10px;
+  font-family: 'Quattrocento', serif;
+}
+
+.contact-form h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #11274f; /* indigo */
+}
+
+/* Labels */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #11274f;
+}
+
+/* Input fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Quattrocento', serif;
+  font-size: 1rem;
+  background-color: #fff3c2; /* light lemon */
+  color: #11274f; /* indigo */
+  box-sizing: border-box;
+}
+
+/* Larger message box */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+.contact-form .button {
+  padding: 0.6rem 1.2rem;
+  background-color: #fff3c2; /* lemon yellow */
+  color: #11274f; /* indigo */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .button:hover {
+  background-color: #f0e29a; /* slightly darker yellow on hover */
+}
+
+
 /* Buy button */
 .book-right .button {
   display: inline-block;
