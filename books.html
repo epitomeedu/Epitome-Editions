@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frozen Hands, Faithful Steps</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Quattrocento&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ---------------- HEADER ---------------- -->
+  <header class="site-header">
+    <div class="header-left">Epitome Editions</div>
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="header-right">
+      <a href="about.html" target="_blank">About the Author</a>
+      <a href="#">Books</a>
+      <a href="#">Events</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+    </nav>
+  </header>
+
+  <!-- ---------------- BOOK SECTION ---------------- -->
+  <section class="book-section">
+
+    <!-- Left: Book cover -->
+    <div class="book-left">
+      <img src="Frozen Hands, Faithful Steps-2.png" alt="Frozen Hands, Faithful Steps Book Cover">
+    </div>
+
+    <!-- Right: Scrolling content -->
+    <div class="book-right">
+      <!-- Book title & subtitle -->
+      <h1 class="book-title">Frozen Hands, Faithful Steps</h1>
+      <h2 class="book-subtitle">A Memoir of Faith and Survival</h2>
+
+      <!-- Book info -->
+      <div class="book-info">
+        <p>Author: Jennifer Rae</p>
+        <p>Publisher: KDP</p>
+        <p>Pages: 31</p>
+        <p>ISBN: xxx-xxx-xxxx</p>
+      </div>
+
+      <!-- Price cards -->
+      <div class="price-cards">
+        <div class="price-card">
+          <h4>Paperback</h4>
+          <button class="price-card-button">$13.66</button>
+        </div>
+        <div class="price-card">
+          <h4>Kindle</h4>
+          <button class="price-card-button">$7.77</button>
+        </div>
+      </div>
+
+      <!-- Collapsible Book Blurb -->
+      <div class="collapsible-section">
+        <button class="collapsible">Book Blurb ★</button>
+        <div class="collapsible-content">
+          <p>When the snow never stops and the nights never end, how do you keep a toddler safe, warm, and thriving in a camper with no running water?</p>
+          <p>Jennifer Rae’s memoir is an unflinching, honest, and sometimes hilarious look at survival against impossible odds. From bitter winters in Upstate New York to sleepless nights, frozen hands, and endless logistics, Jennifer shares how every step, every small victory, and every prayer carried her through.</p>
+          <p>It wasn’t her strength that got her there—it was God. Every frozen hand, every early morning, every box that felt like lead…He was there. Her feet? They never touched the ground.</p>
+          <p>This is a story of faith, perseverance, and love that refuses to quit—a reminder that even in life’s harshest winters, hope can shine through.</p>
+          <p>For a deeper dive into each chaotic, miraculous, and joyful moment, open the book and step inside the camper with Jennifer and her son.</p>
+        </div>
+      </div>
+
+      <!-- Collapsible Author Bio -->
+      <div class="collapsible-section">
+        <button class="collapsible">About the Author ★</button>
+        <div class="collapsible-content">
+          <p>Jennifer Rae is a mother, survivor, and woman of deep faith who has lived a life few could imagine and even fewer could endure. She has been a single mother since the age of nineteen, navigating homelessness, poverty, brutal winters, and systems that were never designed to protect families like hers.</p>
+          <p>Through it all, Jennifer held fast to one purpose: protecting her children and giving them a life marked by dignity, love, and faith. Her journey spans cross country travels, frozen Upstate NY winters, full-life move 2000 miles from NY to Texas alone with a small child, operations management paired with relentless perseverance, and an unshakable belief that God was carrying her and her feet “never touched the ground.”</p>
+          <p>Today, Jennifer homeschools her child and is building a micro-school rooted in enrichment, purpose and truth. She writes not to impress, but to testify — to survival, to faith, and to the quiet strength it takes to keep showing up when the world offers no safety net.</p>
+          <p><em>Frozen Hands, Faithful Steps</em> is her first published work.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3>Contact / Join Our Newsletter</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="3f0f732d-c91c-44ec-b8f2-ef41a33d0574">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" required></textarea>
+          <button class="button" type="submit">Send</button>
+        </form>
+      </div>
+
+    </div> <!-- end book-right -->
+
+  </section>
+
+  <!-- ---------------- SCRIPTS ---------------- -->
+  <script>
+    // Collapsible sections
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach((btn) => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if(content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+
+    // Hamburger toggle
+    function toggleMenu() {
+      const nav = document.querySelector('.header-right');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
